@@ -14,8 +14,8 @@ int main(){
     
     cout << endl;
     for (int i = 0; i < size; i++){
-        int doubledValue = 2 * score[i];
-        cout << doubledValue << " ";
+        score[i] = 2 * score[i];
+        cout << score[i] << " ";
     }
     cout << endl;
     return 0;
