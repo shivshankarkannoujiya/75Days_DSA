@@ -4,7 +4,7 @@ using namespace std;
 
 int firstOccurence(vector<int>& v, int target){
     int low = 0;
-    int high = v.size();
+    int high = v.size() - 1;
     int ans = -1;
 
     int mid = low + (high - low) / 2;
