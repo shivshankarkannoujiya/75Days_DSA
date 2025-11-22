@@ -26,7 +26,7 @@ int getPivotIndex(vector<int>& v){
 }
 
 int main(){
-    vector<int> v{12, 14, 16, 2, 4, 6, 8, 10};
+    vector<int> v{12, 14};
 
     int pivot_index = getPivotIndex(v);
     cout << "PIVOT_ELEMENT: " << pivot_index << endl;
