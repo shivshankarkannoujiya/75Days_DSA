@@ -11,9 +11,9 @@ int getPivotIndex(vector<int>& v){
         int mid = low + (high - low) / 2;
         if(low == high)
             return low;
-        if(v[mid] < v[mid -1]){
+        if(mid - 1 >=0 && v[mid] < v[mid -1]){
             return mid - 1;
-        }else if(v[mid] > v[mid + 1]){
+        }else if( mid + 1 < v.size() && v[mid] > v[mid + 1]){
             return mid;
         }else if(v[low] > v[mid]){
             high = mid - 1;
