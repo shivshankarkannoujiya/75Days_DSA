@@ -9,6 +9,26 @@ void print(vector<int>& v){
     cout << endl;
 }
 
+void bubble_sort(vector<int> &v) {
+
+    int n = v.size();
+    for (int i = 1; i < n; i++){
+        bool isSwapped = false;
+        for (int j = 0; j < n - i; j++){
+            if(v[j] > v[j+1]){
+                int temp = v[j + 1];
+                v[j + 1] = v[j];
+                v[j] = temp;
+                isSwapped = true;
+            }
+        }
+        if(!isSwapped){
+            cout << "ROUND: " << i << " Already Sorted, No swapping done !!" << endl;
+            break;
+        }
+    }
+}
+
 void bubbleSort(vector<int>& v){
     int n = v.size();
     for (int i = n-1; i >= 0; i++){
@@ -35,7 +55,7 @@ void bubbleSort(vector<int>& v){
 
 int main(){
 
-    vector<int> v{1, 2, 3, 4, 5,15 ,6, 9,10,12};
-    bubbleSort(v);
+    vector<int> v{1, 2, 3, 4, 5};
+    bubble_sort(v);
     print(v);
 }
